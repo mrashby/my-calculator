@@ -1,9 +1,16 @@
+/*
+TO FIX:
+
+1) any num/character clicked after equal function without operator
+
+*/
+
 
 let tempInputArray = [] //array used to construct input value
 let tempInputNumber = undefined //temp input value that is calculated in to main value then wiped
 let returnValue = undefined //main value throughout app
 let operationVariable = undefined //input operation
-let previousOperation = undefined //
+let previousOperation = undefined //operation is used AFTER the following input so I am storing it for use one step later
 let currentValue = 0
 let equatedValue = undefined
 
