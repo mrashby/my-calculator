@@ -6,13 +6,13 @@ TO FIX:
 */
 
 
-let tempInputArray = [] //array used to construct input value
+let tempInputArray = [] //array used to build input value
 let tempInputNumber = undefined //temp input value that is calculated in to main value then wiped
 let returnValue = undefined //main value throughout app
 let operationVariable = undefined //input operation
-let previousOperation = undefined //operation is used AFTER the following input so I am storing it for use one step later
+let previousOperation = undefined //operation is used AFTER num input so I am storing it for use one step later
 let currentValue = 0
-let equatedValue = undefined
+let calculatedValue = undefined //stores calculated value if user continues using operators after '='
 
 const numberFunction = (valueVar) => {
     //append to decimal point if value doesn't exist
@@ -43,9 +43,9 @@ const operationFunction = (valueVar) => {
         if (returnValue == undefined) {
             returnValue = tempInputNumber;
         }
-        else if (equatedValue != undefined) {
-            returnValue = equatedValue;
-            equatedValue = undefined;
+        else if (calculatedValue != undefined) {
+            returnValue = calculatedValue;
+            calculatedValue = undefined;
         }
         else {
             //main operation
@@ -118,7 +118,7 @@ const equalFunction = () => {
                 break;
         }
         document.getElementById("currentValue").innerHTML = returnValue;
-        equatedValue = returnValue;
+        calculatedValue = returnValue;
     }
     else {
         window.alert("You should select an initial value, operator, and a second value before using the equal operator.");
@@ -141,7 +141,7 @@ const clearFunction = () => {
     returnValue = undefined
     operationVariable = undefined
     previousOperation = undefined
-    equatedValue = undefined
+    calculatedValue = undefined
     currentValue = 0
     document.getElementById("currentValue").innerHTML = currentValue;
 }
