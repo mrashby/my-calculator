@@ -3,6 +3,12 @@ TO FIX:
 
 1) any num/character clicked after equal function without operator
 
+
+TO INCORPORATE:
+
+1) Class/methods
+2) CSS/better visuals (including live display of inputs)
+
 */
 
 
